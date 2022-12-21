@@ -7,22 +7,12 @@
 Given list containing items (integer, lists, sub-lists) implement **recursive** function which returns list with all
 values flattened. This function mimics behaviour of Kotlin build in ` flatten` method.
 
-[challenge](challenge.kt) | [solution](solution.kt)
+[challenge](solution_test.go) | [solution](solution.go)
 
 ## Limitations
 
 Don't use Kotlin build in [flatten](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/flatten.html) 
 function.
-
-## Examples
-
-```kotlin
-flatten(listOf(1)) // 1
-
-flatten(listOf(1), listOf(listOf(2))) // 1, 2
-
-flatten(listOf(1), listOf(listOf(2), listOf(listOf(3)))) // 1, 2, 3
-```
 
 ## Hints
 

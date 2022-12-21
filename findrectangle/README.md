@@ -8,20 +8,5 @@ rectangle of 0s on a background of 1s.
 Write a function that takes in the image and returns list containing coordinates of top-left and bottom-right pixels
 represented as list of internees:
 
-[challenge.kt](challenge.kt) | [solution](solution.kt)
+[solution_test.go](solution_test.go) | [solution](solution.go)
 
-## Examples
-
-Example 1
-
-```kotlin
-val image = listOf(
-    listOf(1, 1, 0, 0, 0, 1),
-    listOf(1, 1, 0, 0, 0, 1),
-    listOf(1, 1, 1, 1, 1, 1),
-    listOf(1, 1, 1, 1, 1, 1)
-)
-
-findRectangle(image)  // [0, 2, 1, 4]
-
-```

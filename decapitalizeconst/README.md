@@ -9,14 +9,5 @@ converts it into variable name (eg. `fooBar`):
 - convert next words to lowercase, but first character is still uppercase
 - remove all underscore characters
 
-[challenge](challenge.kt) | [solution](solution.kt)
+[challenge](solution_test.go) | [solution](solution.go)
 
-## Examples
-
-```kotlin
-decapitalizeConst("FOO") // foo
-
-decapitalizeConst("FOO_BAR") // fooBar
-
-decapitalizeConst("__FOO_BAR_BAZ") // fooBarBaz
-```

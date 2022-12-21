@@ -6,21 +6,5 @@ Given a string and integer `shift` implement a function which shifts each charac
 [cesar cipher](https://cryptii.com/pipes/caesar-cipher)) eg. if shift is `1` then `a` becomes `b`, `c` becomes`d`, `z`
 became `a` etc. Allowed input is string containing only lowercase characters from alphabet `abcdefghijklmnopqrstuvwxyz`.
 
-[challenge](challenge.kt) | [solution](solution.kt)
+[challenge](solution_test.go) | [solution](solution.go)
 
-## Examples
-
-```kotlin
-encodeCaesarCipher("abc", 1) // bcd
-
-encodeCaesarCipher("abc", 3) // def
-
-encodeCaesarCipher("xyz", 1) // xya
-```
-
-## Hints
-
-<details>
-<summary>Hint 1</summary>
-Use <a href="http://sticksandstones.kstrom.com/appen.html">ASCI character table</a>
-</details>

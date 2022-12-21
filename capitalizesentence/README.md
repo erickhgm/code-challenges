@@ -4,11 +4,5 @@
 
 Given a string implement a function which capitalizes first letter of every word in that string.
 
-[challenge](challenge.kt) | [solution](solution.kt)
+[challenge](solution_test.go) | [solution](solution.go)
 
-## Examples
-
-```kotlin
-capitalizeSentence("flower") // Flower
-capitalizeSentence("this is a house") // This Is A House
-```

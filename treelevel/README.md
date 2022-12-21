@@ -1,18 +1,14 @@
 # Tree level width
 
-## Nice to solve before
-
-[Tree traversal](../traversal/TreeTraversal.md)
-
 ## Instructions
 
 Given the root node of a tree, return an list where each element is the width of the tree at each level.
 
-[challenge](challenge.kt) | [solution](solution.kt)
+[challenge](solution_test.go) | [solution](solution.go)
 
 ## Examples
 
-```kotlin
+```go
     A
   / |  \
 B   C   D

@@ -5,17 +5,7 @@
 Given a string implement a function which returns `true` if string contains at least one repeated character, otherwise
 it returns `false`.
 
-[challenge](challenge.kt) | [solution](solution.kt)
-
-## Examples
-
-```kotlin
-hasRepeatedCharacter("abc") // false"
-
-hasRepeatedCharacter("aabc") // true
-
-hasRepeatedCharacter("aabcc") // true
-```
+[challenge](solution_test.go) | [solution](solution.go)
 
 ## Hints
 

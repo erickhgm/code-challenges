@@ -20,32 +20,5 @@ them:
 - Linked list
 - Two Stacks
 
-[challenge](challenge.kt) | [solution](solution.kt)
+[challenge](solution_test.go) | [solution](solution.go)
 
-## Examples
-
-Example 1
-
-```kotlin
-val q = Queue<Int>()
-q.add(1)
-q.remove() // 1
-q.remove() // null
-```
-
-Example 2
-
-```kotlin
-val q = Queue<Char>()
-q.isEmpty() // true
-q.add('A')
-q.isEmpty() // false
-q.add('B')
-q.add('C')
-q.remove() // A
-q.peek() // B
-q.peek() // B
-q.remove() // B
-q.remove() // C
-q.remove() // null
-```

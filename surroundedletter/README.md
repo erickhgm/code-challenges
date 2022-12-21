@@ -6,19 +6,7 @@ Given a string containing letters and `+` characters implement a function which 
 is surrounded by `+` character. There may be more than one `+` character between letters (`+a++b+`) and letters may be
 surrounded by the same `+` character (`+a+b+`).
 
-[challenge](challenge.kt) | [solution](solution.kt)
-
-## Examples
-
-```kotlin
-surroundedLetter("+a+") // true
-
-surroundedLetter("+ab+") // false
-
-surroundedLetter("+a+b+") // true
-
-surroundedLetter("+a++b++") // true
-```
+[challenge](solution_test.go) | [solution](solution.go)
 
 ## Hints
 

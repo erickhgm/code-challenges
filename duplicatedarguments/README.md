@@ -1,30 +1,15 @@
-package com.igorwojda.string.getduplicatedarguments
+# Get duplicated arguments
 
-import org.amshove.kluent.shouldBeEqualTo
-import org.junit.jupiter.api.Test
+## Instructions
 
-fun getDuplicatedArguments(vararg strings: String): List<String>? {
-    TODO("not implemented")
-}
+Given variable number of arguments (list of strings) checks whether there are any duplicates among the arguments and
+return list of all unique duplicates. If no arguments are passes return empty list.
 
-private class Test {
-    @Test
-    fun `a, b, c returns empty list`() {
-        getDuplicatedArguments("a", "b", "c") shouldBeEqualTo listOf()
-    }
+[challenge](challenge.kt) | [solution](solution.kt)
 
-    @Test
-    fun `a, b, c, a returns a`() {
-        getDuplicatedArguments("a", "b", "c", "a") shouldBeEqualTo listOf("a")
-    }
+## Hints
 
-    @Test
-    fun `a, e, a, e, d, a returns a, e`() {
-        getDuplicatedArguments("a", "e", "a", "e", "d", "a") shouldBeEqualTo listOf("a", "e")
-    }
-
-    @Test
-    fun `no arguments returns empty list`() {
-        getDuplicatedArguments() shouldBeEqualTo listOf()
-    }
-}
+<details>
+<summary>Hint 1</summary>
+Use frequency counter or multiple pointers pattern.
+</details>

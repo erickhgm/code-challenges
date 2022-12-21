@@ -17,15 +17,4 @@ them:
 - List
 - Linked list
 
-[challenge](challenge.kt) | [solution](solution.kt)
-
-## Examples
-
-```kotlin
-val s = new Stack()
-s.add(1)
-s.add(2)
-s.remove() // 2
-s.remove() // 1
-s.remove() // null
-```
+[challenge](solution_test.go) | [solution](solution.go)

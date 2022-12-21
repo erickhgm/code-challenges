@@ -8,13 +8,5 @@
 
 Given a list of integers return a list that contains only odd integers (only integers which are not a multiple of `2`).
 
-[challenge](challenge.kt) | [solution](solution.kt)
+[challenge](solution_test.go) | [solution](solution.go)
 
-## Examples
-
-```kotlin
-getOdd(listOf(1, 2, 3)) // 1, 3
-
-getOdd(listOf(4, 6, 8, 7, 9)) // 7, 9
-
-```
