@@ -19,3 +19,11 @@ func Calc(n int) []int {
 	}
 	return fib
 }
+
+func Fib(n int) int {
+	if n < 2 {
+		return n
+	}
+	out := Fib(n-1) + Fib(n-2)
+	return out
+}
