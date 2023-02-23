@@ -29,3 +29,26 @@ func TestSearch(t *testing.T) {
 		assert.Equal(t, c.expected, out)
 	}
 }
+
+func TestBinarySearch(t *testing.T) {
+	cases := []struct {
+		input1   []int
+		input2   int
+		expected int
+	}{
+		{input1: []int{1, 2, 3}, input2: 1, expected: 0},
+		{input1: []int{1, 2, 3}, input2: 2, expected: 1},
+		{input1: []int{1, 2, 3}, input2: 3, expected: 2},
+		{input1: []int{1, 2, 3}, input2: 4, expected: -1},
+
+		{input1: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}, input2: 1, expected: 0},
+		{input1: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}, input2: 10, expected: 9},
+		{input1: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}, input2: 20, expected: 19},
+		{input1: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}, input2: 77, expected: -1},
+	}
+
+	for _, c := range cases {
+		out := binarySearch(c.input1, c.input2)
+		assert.Equal(t, c.expected, out)
+	}
+}

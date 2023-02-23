@@ -43,6 +43,11 @@ func TestBinaryTreeLeft(t *testing.T) {
 }
 
 func TestBinaryTree(t *testing.T) {
+	//////////////////////
+	//        50        //
+	//    30      70    //
+	//  20  40  60  80  //
+	//////////////////////
 	root := NewBinaryTree(50)
 	root.Add(30)
 	root.Add(20)
@@ -58,4 +63,46 @@ func TestBinaryTree(t *testing.T) {
 	assert.Equal(t, root.right.value, 70)
 	assert.Equal(t, root.right.left.value, 60)
 	assert.Equal(t, root.right.right.value, 80)
+
+	assert.Equal(t, true, root.Has(50))
+	assert.Equal(t, true, root.Has(30))
+	assert.Equal(t, true, root.Has(20))
+	assert.Equal(t, true, root.Has(40))
+	assert.Equal(t, true, root.Has(70))
+	assert.Equal(t, true, root.Has(60))
+	assert.Equal(t, true, root.Has(80))
+
+	assert.Equal(t, false, root.Has(10))
+	assert.Equal(t, false, root.Has(100))
+
+	root.PrintInOrder()
+	root.PrintPreOrder()
+	root.PrintPostOrder()
+}
+
+func TestBinaryTreeInvert(t *testing.T) {
+	//////////////////////
+	//        50        //
+	//    30      70    //
+	//  20  40  60  80  //
+	//////////////////////
+	root := NewBinaryTree(50)
+	root.Add(30)
+	root.Add(20)
+	root.Add(40)
+	root.Add(70)
+	root.Add(60)
+	root.Add(80)
+
+	assert.Equal(t, root.value, 50)
+	assert.Equal(t, root.left.value, 30)
+	assert.Equal(t, root.left.left.value, 20)
+	assert.Equal(t, root.left.right.value, 40)
+	assert.Equal(t, root.right.value, 70)
+	assert.Equal(t, root.right.left.value, 60)
+	assert.Equal(t, root.right.right.value, 80)
+
+	root.PrintInOrder()
+	root.Invert()
+	root.PrintInOrder()
 }

@@ -6,7 +6,7 @@
 
 ## Instructions
 
-Given a string, return true if the input string is an a permutation of palindrome or false if it is not.
+Given a string, return `true` if the input string is an a permutation of palindrome or `false` if it is not.
 
 Palindromes are strings that form the same word if it is reversed.
 

@@ -6,7 +6,7 @@ Big O, also known as Big O notation, represents an algorithm's `worst-case compl
 
 Big O defines the runtime required to execute an algorithm by identifying how the performance of your algorithm will change as the input size grows. But it does not tell you how fast your algorithm's runtime is.
 
-Big O notation measures the efficiency and performance of your algorithm using `time` and `space` complexity.
+Big O notation measures the efficiency and performance of your algorithm using `time` and `space` complexity. Big O measure the linear algorithm not constant algorithm.
 
 An algorithm's `time` complexity specifies `how long it will take to execute` an algorithm as a function of its input size. Similarly, an algorithm's `space` complexity specifies the `total amount of space or memory` required to execute an algorithm as a function of the size of the input.
 
@@ -35,6 +35,7 @@ In Big O, there are six major types of complexities (time and space):
 
 ## Constant Time: O(1)
 When your algorithm is `not dependent on the input size n`, it is said to have a constant time complexity with order O(1). This means that the run time will always be the same regardless of the input size.
+
 ```golang
 func firstElement (array []int) int {
   return array[0];
@@ -66,6 +67,28 @@ This is similar to linear time complexity, except that the runtime does not depe
 
 ```golang
 func logN(n int) {
+  if n == 1 {
+    return
+  }
+  for n in 1 {
+    n = math.Floor(n / 2)
+  }
+  return logN(n)
+}
+```
+Explanation:
+What number we need to power 2 to get 8 as result?
+O(log n) => O(log 8) => log base 2 of 8 => 2^?=8 => 2^3=8
+
+logN(8)
+
+Iteration 1: 8/2=4
+Iteration 2: 4/2=2
+Iteration 3: 2/2=1
+Iteration 4: 1/2=0 - X
+
+```golang
+func logNRecusive(n int) {
   if n == 0 {
     return
   }
@@ -198,3 +221,70 @@ This is 3!, which is six permutations.
 What about 4? That’s 120.
 
 What about 10? That’s 3.628.800.
+
+Ref.: https://brasilescola.uol.com.br/matematica/fatorial.htm
+
+## Common mistakes
+
+### Two loops
+This is: `O(n)`
+```golang
+func twoInputs(a int) {
+  for i := 0; i < a; i++ {
+    // sommething
+  }
+  for i := 0; i < a; i++ {
+    // sommething
+  }
+};
+```
+
+### Two inputs
+This is: `O(a + b)`
+```golang
+func twoInputs(a int, b uint) {
+  for i := 0; i < a; i++ {
+    // sommething
+  }
+  for i := 0; i < b; i++ {
+    // sommething
+  }
+};
+```
+
+This is: `O(a x b)`
+```golang
+func twoInputs(a int, b uint) {
+  for i := 0; i < a; i++ {
+    for i := 0; i < a; i++ {
+      // sommething
+    }
+  }
+};
+```
+
+
+
+## Combinations and Permutations
+- When the order doesn't matter, it is a Combination.
+- When the order does matter it is a Permutation.
+
+### Permutations with Repetition
+
+Example: in the lock above, there are 10 numbers to choose from (0,1,2,3,4,5,6,7,8,9) and we choose 3 of them:
+
+`10 × 10 × ... (3 times) = 1^3 = 1,000 permutations`
+
+### Permutations without Repetition
+Example: what order could 16 pool balls be in?
+After choosing, say, number "14" we can't choose it again.
+
+So, our first choice has 16 possibilites, and our next choice has 15 possibilities, then 14, 13, 12, 11, ... etc. And the total permutations are:
+
+`16 × 15 × 14 × 13 × ... = 20,922,789,888,000`
+
+But maybe we don't want to choose them all, just 3 of them, and that is then:
+
+`16 × 15 × 14 = 3,360`
+
+Ref.: https://www.mathsisfun.com/combinatorics/combinations-permutations.html

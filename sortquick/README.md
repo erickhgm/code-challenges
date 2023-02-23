@@ -2,8 +2,9 @@
 
 ## Instructions
 
-Sort list of numbers from lowest number to greatest number using
-[quick sort](https://en.wikipedia.org/wiki/Quicksort).
+Sort list of numbers from lowest number to greatest number using [quick sort](https://en.wikipedia.org/wiki/Quicksort).
+
+Complexity `O(n log n)`
 
 Algorithm: 
 - Pick first element as pivot (pivot can be also last, random element but we explicitly always pick first element)
@@ -14,3 +15,5 @@ Algorithm:
   the right side of the pivot)
 
 [challenge](solution_test.go) | [solution](solution.go)
+
+Ref.: https://www.youtube.com/watch?v=eqo2LxRADhU&t=96s

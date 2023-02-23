@@ -9,9 +9,7 @@ func Sort(n []int) []int {
 				minIndex = j
 			}
 		}
-		temp := n[minIndex]
-		n[minIndex] = n[i]
-		n[i] = temp
+		n[i], n[minIndex] = n[minIndex], n[i]
 	}
 	return n
 }

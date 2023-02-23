@@ -9,3 +9,6 @@ Algorithm: Sort an list by repeatedly finding the minimum element (ascending ord
 the beginning of the list.
 
 [challenge](solution_test.go) | [solution](solution.go)
+
+
+`O(n^2)`

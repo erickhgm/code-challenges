@@ -1,5 +1,6 @@
 package fibonacci
 
+// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 func Calc(n int) []int {
 	if n == 0 {
 		return []int{0}
@@ -20,6 +21,7 @@ func Calc(n int) []int {
 	return fib
 }
 
+// 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 func Fib(n int) int {
 	if n < 2 {
 		return n

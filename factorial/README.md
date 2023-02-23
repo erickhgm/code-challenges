@@ -7,3 +7,5 @@ that integer. Factorial (of positive integer) is number that is created by multi
 factorial of `3` (`3!`) is equal to `6` (`3 * 2 * 1`)
 
 [challenge](solution_test.go) | [solution](solution.go)
+
+Ref.: https://www.youtube.com/watch?v=vbh8t-ok_4E&list=PL7g1jYj15RUPVZDU9C276SZvlJjf4hzqV&index=6
